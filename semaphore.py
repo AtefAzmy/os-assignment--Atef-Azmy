@@ -1,5 +1,4 @@
-# semaphore.py
-# Demonstrates using a Semaphore to limit concurrent access (e.g., a pool of resources).
+
 
 import threading, time, random
 
