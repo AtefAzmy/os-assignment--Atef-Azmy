@@ -1,7 +1,7 @@
 # OS Assignment - Threads, Deadlock, Semaphore
 هذه الملفات توضح أمثلة مبسطة لمفاهيم المادة: threading, deadlock, semaphore.
 
-**المحتويات**
+**المحتويات
 - `threading.py`  : مثال على استخدام `threading.Thread` مع وبدون قفل (Lock) لعرض race condition.
 - `deadlock.py`   : مثال يوضح كيف يحدث deadlock عند الحصول على أقفال بترتيب متعاكس.
 - `semaphore.py`  : مثال على استخدام `threading.Semaphore` للحد من عدد الخيوط المتزامنة.
