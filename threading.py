@@ -1,8 +1,4 @@
-# threading.py
-# Demonstrates basic threading in Python: multiple threads incrementing a shared counter.
-# Includes an example with and without a Lock to show race conditions.
 
-import threading
 import time
 
 counter = 0
@@ -10,7 +6,7 @@ counter = 0
 def worker_no_lock(n, name):
     global counter
     for _ in range(n):
-        # race condition possible here
+       
         counter += 1
         time.sleep(0.0001)
     print(f"{name} finished (no lock)")
@@ -27,7 +23,7 @@ def main():
     global counter
     print('--- Threading demo ---')
 
-    # Demo 1: without lock (race condition expected)
+   
     counter = 0
     t1 = threading.Thread(target=worker_no_lock, args=(1000, 'T1'))
     t2 = threading.Thread(target=worker_no_lock, args=(1000, 'T2'))
@@ -35,7 +31,7 @@ def main():
     t1.join(); t2.join()
     print('Expected counter 2000, got (no lock):', counter)
 
-    # Demo 2: with Lock (safe)
+   
     counter = 0
     lock = threading.Lock()
     t3 = threading.Thread(target=worker_with_lock, args=(1000, lock, 'T3'))
