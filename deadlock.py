@@ -1,6 +1,4 @@
-# deadlock.py
-# Demonstrates a simple deadlock scenario with two locks acquired in opposite orders.
-# WARNING: If you run this code, it may hang because of deadlock. For demonstration only.
+
 
 import threading, time
 
